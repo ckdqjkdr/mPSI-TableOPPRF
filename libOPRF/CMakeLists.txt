@@ -5,11 +5,11 @@
 #############################################
 #                 Link NTL                  #
 #############################################
-set(NTL_Lib_Dirs "${NTL_Dirs}/src/")
+set(NTL_Lib_Dirs "${NTL_Dirs}")
 set(NTL_Include_Dirs "${NTL_Dirs}/include/")
 
 # default location for NTL
-set(NTL_LIB "${NTL_Lib_Dirs}ntl.a")
+set(NTL_LIB "${NTL_Lib_Dirs}lib/libntl.a")
 
 
 if(NOT EXISTS "${NTL_LIB}")
@@ -49,6 +49,7 @@ find_library(
 file(GLOB_RECURSE SRCS *.cpp)
 
 include_directories(${CMAKE_SOURCE_DIR}/libOPRF)
+include_directories($ENV{HOME}/libscapi/install/include)
 
 add_library(libOPRF ${SRCS})
 

@@ -12,7 +12,7 @@ set( CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_HOME_DIRECTORY}/lib)
 #            Flag and #defines              #
 #############################################
 add_definitions(-DSOLUTION_DIR=\"${CMAKE_SOURCE_DIR}\")
-set(CMAKE_C_FLAGS "-ffunction-sections -Wall  -maes -msse2 -mbmi2 -msse4.1 -mpclmul -Wfatal-errors -pthread")
+set(CMAKE_C_FLAGS "-ffunction-sections -g -ggdb -Wall  -maes -msse2 -mbmi2 -msse4.1 -mpclmul -Wfatal-errors -pthread")
 set(CMAKE_CXX_FLAGS  "${CMAKE_C_FLAGS}  -std=c++14")
 
 # Set a default build type for single-configuration
@@ -28,7 +28,7 @@ endif()
 # Select flags.
 SET(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG")
 SET(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O2 -g")
-SET(CMAKE_CXX_FLAGS_DEBUG  "-O0 -g")
+SET(CMAKE_CXX_FLAGS_DEBUG  "-O0 -g -ggdb")
 
 
 #############################################
@@ -47,9 +47,9 @@ link_directories("${Miracl_Dirs}/miracl/source/")
 
 # default location for NTL
 #set(NTL_Dirs "${CMAKE_SOURCE_DIR}/thirdparty/linux/ntl/")
-set(NTL_Dirs "$ENV{HOME}/libscapi/build/NTL")
+set(NTL_Dirs "$ENV{HOME}/libscapi/install/")
 include_directories("${NTL_Dirs}/include/")
-link_directories("${NTL_Dirs}/src/")
+link_directories("${NTL_Dirs}/lib/")
 
 # default location for Boost
 set(BOOST_ROOT "${CMAKE_SOURCE_DIR}/thirdparty/linux/boost/")
@@ -87,3 +87,6 @@ include_directories(libOPRF)
 #              Build Frontend               #
 #############################################
 add_subdirectory(frontend)
+
+
+add_subdirectory(add_on)

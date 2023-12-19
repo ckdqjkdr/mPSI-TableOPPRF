@@ -1,0 +1,105 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) 单元测试",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/add_on",
+            "args": ["-u"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/add_on",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "将反汇编风格设置为 Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "(gdb) 启动0",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/add_on",
+            "args": ["-p", "0", "-i", "test_data/input0.txt", "-o", "test_data/output0.txt"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/add_on",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "将反汇编风格设置为 Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "(gdb) 启动1",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/add_on",
+            "args": ["-p", "1", "-i", "test_data/input1.txt", "-o", "test_data/output1.txt"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/add_on",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "将反汇编风格设置为 Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "(gdb) 启动2",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/add_on",
+            "args": ["-p", "2", "-i", "test_data/input2.txt", "-o", "test_data/output2.txt"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/add_on",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "将反汇编风格设置为 Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+
+    ]
+}

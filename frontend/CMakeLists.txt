@@ -25,7 +25,7 @@ target_link_libraries(frontend.exe libOPRF)
 target_link_libraries(frontend.exe libOTe)
 target_link_libraries(frontend.exe gmp)
 target_link_libraries(frontend.exe $ENV{HOME}/libscapi/libscapi.a)
-target_link_libraries(frontend.exe $ENV{HOME}/libscapi/build/NTL/src/ntl.a)
+target_link_libraries(frontend.exe $ENV{HOME}/libscapi/install/lib/libntl.a)
 #        $ENV{HOME}/libscapi/libscapi.a gmp OTExtensionBristol libsimpleot.a
 target_link_libraries(frontend.exe gmp)
 target_link_libraries(frontend.exe boost_system boost_thread pthread crypto dl ssl z)
